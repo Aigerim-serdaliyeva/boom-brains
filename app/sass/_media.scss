@@ -1,0 +1,105 @@
+
+@import "vars";
+
+/*==========  Desktop First  ==========*/
+
+@media (max-width: 1690px) {
+  .s-brains {
+    &__content {      
+      margin: 300px 0 80px;
+    }
+    &__phone {
+      margin-left: -20px;
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .s-brains {
+    &__content {      
+      margin: 250px 0 70px;
+    }
+  }
+}
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+  
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+  .s-brains {
+    height: auto;
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      margin: 150px 15px 80px;
+    }
+  }
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {  
+  
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+  .s-brains {
+    &__phone {
+      flex-direction: column;
+      margin: 0 auto 0 -30px;
+      img {
+        &:last-child {
+          margin: -40px 0 20px;
+        }
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__app {
+      a {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+      }
+      img {
+        &:first-child {
+          margin: 0 0 20px 0;
+        }
+      }
+    }
+  }
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+  
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+  .main-menu {
+		.container {
+			width: auto;
+			padding: 0;
+		}
+  }
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}

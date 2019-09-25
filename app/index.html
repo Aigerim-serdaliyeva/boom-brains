@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Boom brains</title>
+  <meta name="description" content="KDO">
+  <meta name="keywords" content="">
+
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:image" content="path/to/image.jpg">
+
+  <style>
+    .loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #F7F7F7;
+      z-index: 98;
+    }
+  </style>
+
+  <link rel="shortcut icon" href="img/favicon.ico?v=12" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="./css/libs.min.css">
+  <link rel="stylesheet" href="./css/main.min.css">
+  
+</head>
+
+<body id="main-page">
+
+    <div class="loader">
+      <img src="./img/loader.png" alt="">
+    </div>
+
+  <div id="app" class="page-wrapper">
+
+    <section class="s-brains">
+      <video autoplay muted loop class="s-brains__video">
+        <source src="./video/kdo_video_45mb.mp4" type="video/mp4">
+      </video>
+      <div class="s-brains__overlay"></div>
+      <div class="container">
+        <div class="s-brains__content">
+          <div class="s-brains__phone">
+            <img src="./img/phone-1.svg" alt="">
+            <img src="./img/phone-2.svg" alt="">
+          </div>
+          
+          <div class="s-brains__block">
+            <div class="s-brains__title">
+              <img src="./img/boom.svg" alt="">
+              <img src="./img/BRAINS.svg" alt="">
+            </div>
+            <h3 class="s-brains__text">Boom Brains - это логические игры, развивающие реакцию, мышление, память. С помощью логических игр, в голове активно функционируют все участки мозга и помогают Вам и Вашему мозгу всегда находиться в хорошей форме. Развивайте свой мозг
+              и проживайте долгую и счастливую жизнь!</h3>
+            <div class="s-brains__app">
+              <a target="_blank" href="https://apps.apple.com/us/app/boom-brains/id1478261533"><img src="./img/app-store.png" alt=""></a>
+              <a target="_blank" href="https://play.google.com/store/apps/details?id=kdo.one.boombrains"><img src="./img/google-play.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="s-brains__info">Development by <span>KDO</span> team</div>
+      </div>
+    </section>
+
+  </div>
+  
+  <script src="./js/libs.min.js"></script>
+  <script src="./js/localization.js"></script>
+  <script src="./js/main.min.js"></script>
+</body>
+
+</html>
