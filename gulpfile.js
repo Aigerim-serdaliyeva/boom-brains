@@ -37,13 +37,6 @@ gulp.task('sass', function () {
 
 gulp.task('libs-css', function () {
   return gulp.src([
-    'node_modules/remodal/dist/remodal.css',
-    'node_modules/remodal/dist/remodal-default-theme.css',
-    'node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
-    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
-    'node_modules/hamburgers/dist/hamburgers.min.css',
-    'node_modules/font-awesome/css/font-awesome.min.css',
-    'node_modules/animate.css/animate.min.css',
   ])
   .pipe(cleancss({level: { 1: { specialComments: 0 } } })) // Опционально, закомментировать при отладке
   .pipe(concat('libs.min.css'))
@@ -64,17 +57,7 @@ gulp.task('main-js', function () {
 
 gulp.task('libs-js', function () {
   return gulp.src([
-    'node_modules/gsap/src/minified/TweenMax.min.js',   
-   'node_modules/gsap/src/minified/TimelineLite.min.js',  
-   'node_modules/jquery/dist/jquery.min.js',
-   'node_modules/remodal/dist/remodal.min.js',
-   'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
-   'node_modules/owl.carousel/dist/owl.carousel.min.js',
-   'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
-   'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-   'node_modules/vue/dist/vue.js',
-    // 'node_modules/vue/dist/vue.min.js',
-    'node_modules/vue-i18n/dist/vue-i18n.min.js'   
+   'node_modules/jquery/dist/jquery.min.js',  
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify()) // Минимизировать весь js (на выбор)
@@ -100,7 +83,7 @@ gulp.task('watch', function () {
   gulp.watch(['app/*.html'], gulp.parallel('code'));
 });
 
-gulp.task('build', gulp.parallel('removedist', 'imagemin', 'sass', 'libs-css', 'libs-js', 'main-js'), function () {
+gulp.task('build', gulp.parallel('removedist', 'imagemin', 'sass', 'libs-js', 'main-js'), function () {
 
   var buildFiles = gulp.src([
     'app/*.html',
@@ -153,4 +136,4 @@ gulp.task('rsync', function() {
 	}))
 });
 
-gulp.task('default', gulp.parallel('libs-css', 'sass', 'libs-js', 'main-js', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('sass', 'libs-js', 'main-js', 'browser-sync', 'watch'));

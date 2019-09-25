@@ -22,6 +22,14 @@
   }
 }
 
+@media (max-width: 1350px) {
+  .s-brains {
+    &__content {      
+      margin: 180px 0 70px;
+    }
+  }
+}
+
 // ≥1200px
 @include media-breakpoint-down(lg) {
   
