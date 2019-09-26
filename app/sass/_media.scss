@@ -5,8 +5,9 @@
 
 @media (max-width: 1690px) {
   .s-brains {
+    padding: 20px 0;
     &__content {      
-      margin: 300px 0 80px;
+      margin-bottom: 10px;
     }
     &__phone {
       margin-left: -20px;
@@ -17,7 +18,30 @@
 @media (max-width: 1450px) {
   .s-brains {
     &__content {      
-      margin: 250px 0 70px;
+      margin-bottom: 10px;
+    }
+    &__phone {
+      max-height: 580px;
+    }
+    &__block {      
+      max-width: 450px;
+    }
+    &__title {
+      img {
+        &:first-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &__text {
+      margin: 25px 0;
+    }
+    &__app {
+      img {
+        &:first-child {
+          margin-right: 30px;
+        }
+      }
     }
   }
 }
@@ -25,7 +49,7 @@
 @media (max-width: 1350px) {
   .s-brains {
     &__content {      
-      margin: 180px 0 70px;
+      margin-bottom: 0;
     }
   }
 }
@@ -39,10 +63,12 @@
 @include media-breakpoint-down(md) {
   .s-brains {
     height: auto;
+    padding: 100px 0 50px;
+    
     &__content {
       flex-direction: column;
       align-items: center;
-      margin: 150px 15px 80px;
+      margin-bottom: 50px;
     }
   }
 }
@@ -57,7 +83,7 @@
   .s-brains {
     &__phone {
       flex-direction: column;
-      margin: 0 auto 0 -30px;
+      // margin: 0 auto;
       img {
         &:last-child {
           margin: -40px 0 20px;
